@@ -1,13 +1,20 @@
 <template>
-  <div id="nav">
-    1112222
-  </div>
   <router-view/>
 </template>
 <script lang='ts'>
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 export default defineComponent({
-  name: 'app'
+  name: 'app',
+  setup () {
+    const sizeType = ref('medium')
+    const handleClickSetSizeType = () => {
+      sizeType.value = 'small'
+    }
+    return {
+      sizeType,
+      handleClickSetSizeType
+    }
+  }
 })
 </script>
 <style lang="scss">

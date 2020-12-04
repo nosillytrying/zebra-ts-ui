@@ -1,0 +1,88 @@
+@import "../../variable.scss";
+@import './_var.scss';
+@import './_map.scss';
+@import './_mix.scss';
+@import './_skin.scss';
+
+@include blockquote(button) {
+  line-height: 1;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid $button-default-border-color;
+  font-size: $button-default-font-size;
+  border-radius: $button-default-border-radius;
+  padding: $button-default-padding;
+  color: $button-default-color;
+  display: inline-flex;
+  outline: none;
+  min-width: 24px;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  background-color: $button-default-background-color;
+  &.#{$namespace}--left {
+    .icon {
+      order: 1;
+    }
+    span {
+      order: 2;
+    }
+  }
+  &.#{$namespace}--right {
+    .icon {
+      order: 1;
+    }
+    span {
+      order: 2;
+    }
+  }
+  &.is-round {
+    border-radius: 23px;
+    padding: 12px 23px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $button-default-hover-focus-color;
+    border-color: $button-default-hover-focus-border-color;
+    background-color: $button-default-hover-focus-background-color;
+  }
+
+  &.is-pain {
+    &:hover,
+    &:focus {
+      color: $button-default-hover-focus-color;
+      border-color: $button-default-hover-focus-border-color;
+      background-color: $button-default-hover-focus-background-color;
+    }
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    color: $button-default-disabled-color;
+    background-color: $button-default-disabled-background-color;
+    border-color: $button-default-disabled-border-color;
+  }
+
+  &.is-circle {
+    padding: 12px;
+    border-radius: 50%;
+  }
+  @keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .icon-loading {
+    animation: rotateAnimation 2s linear infinite;
+  }
+  .#{$namespace}--slot{
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  @include status($map-status);
+}

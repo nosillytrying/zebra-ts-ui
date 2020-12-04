@@ -1,0 +1,35 @@
+main {
+  width: 100%;
+  padding: 60px 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+label {
+  display: flex;
+  align-items: center;
+}
+input {
+  padding: 0;
+  width: 29px;
+  height: 29px;
+}
+div.variables-block {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 29px;
+}
+/* 局部 custom-variables */
+div.variables-block > div {
+  --r: 51;
+  --g: 51;
+  --b: 51;
+}
+div.variables-block > div::after {
+  content: '';
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  background: rgb(var(--r), var(--g), var(--b));
+}

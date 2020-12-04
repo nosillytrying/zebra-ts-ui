@@ -1,0 +1,174 @@
+@import './_var.scss';
+
+$map-color: (
+  text: $button-text-color,
+  primary: $button-primary-color,
+  success: $button-success-color,
+  warning: $button-warning-color,
+  danger: $button-danger-color,
+  info: $button-info-color,
+);
+$map-default-disabled-color: (
+  text: $button-default-text-plain-disabled-color,
+  primary: $button-default-primary-plain-disabled-color,
+  success: $button-default-success-plain-disabled-color,
+  warning: $button-default-warning-plain-disabled-color,
+  danger: $button-default-danger-plain-disabled-color,
+  info: $button-default-info-plain-disabled-color,
+);
+$map-default-disabled-background: (
+  primary: $button-default-primary-plain-disabled-background,
+  success: $button-default-success-plain-disabled-background,
+  warning: $button-default-warning-plain-disabled-background,
+  danger: $button-default-danger-plain-disabled-background,
+  info: $button-default-info-plain-disabled-background,
+);
+
+$map-default-disabled-border-color: (
+  primary: $button-default-primary-plain-disabled-border-color,
+  success: $button-default-success-plain-disabled-border-color,
+  warning: $button-default-warning-plain-disabled-border-color,
+  danger: $button-default-danger-plain-disabled-border-color,
+  info: $button-default-info-plain-disabled-border-color,
+);
+
+$map-status: (
+  text: $button-text,
+  primary: $button-primary,
+  success: $button-success,
+  warning: $button-warning,
+  danger: $button-danger,
+  info: $button-info,
+);
+
+$map-status-active: (
+  primary: $button-primary-active,
+  success: $button-success-active,
+  info: $button-info-active,
+  warning: $button-warning-active,
+  danger: $button-danger-active,
+);
+$map-status-active-color: (
+  primary: $button-primary-active-color,
+  success: $button-success-active-color,
+  info: $button-info-active-color,
+  warning: $button-warning-active-color,
+  danger: $button-danger-active-color,
+);
+
+$map-hover-focus: (
+  primary: $button-primary-hover-focus,
+  success: $button-success-hover-focus,
+  warning: $button-warning-hover-focus,
+  danger: $button-danger-hover-focus,
+  info: $button-info-hover-focus,
+);
+
+$map-plain-color: (
+  primary: $button-primary-plain-color,
+  success: $button-success-plain-color,
+  warning: $button-warning-plain-color,
+  danger: $button-danger-plain-color,
+  info: $button-info-plain-color,
+);
+
+$map-plain-background: (
+  primary: $button-primary-plain-background,
+  success: $button-success-plain-background,
+  warning: $button-warning-plain-background,
+  danger: $button-danger-plain-background,
+  info: $button-info-plain-background,
+);
+
+$map-plain-border-color: (
+  primary: $button-primary-plain-border-color,
+  success: $button-success-plain-border-color,
+  warning: $button-warning-plain-border-color,
+  danger: $button-danger-plain-border-color,
+  info: $button-info-plain-border-color,
+);
+
+$map-plain-hover-color: (
+  primary: $button-primary-plain-hover-color,
+  success: $button-success-plain-hover-color,
+  warning: $button-warning-plain-hover-color,
+  danger: $button-danger-plain-hover-color,
+  info: $button-info-plain-hover-color,
+);
+
+$map-plain-hover-background: (
+  primary: $button-primary-plain-hover-background,
+  success: $button-success-plain-hover-background,
+  warning: $button-warning-plain-hover-background,
+  danger: $button-danger-plain-hover-background,
+  info: $button-info-plain-hover-background,
+);
+
+$map-plain-hover-border-color: (
+  primary: $button-primary-plain-hover-border-color,
+  success: $button-success-plain-hover-border-color,
+  warning: $button-warning-plain-hover-border-color,
+  danger: $button-danger-plain-hover-border-color,
+  info: $button-info-plain-hover-border-color,
+);
+
+$map-plain-active-color: (
+  primary: $button-primary-plain-active-color,
+  success: $button-success-plain-active-color,
+  warning: $button-warning-plain-active-color,
+  danger: $button-danger-plain-active-color,
+  info: $button-info-plain-active-color,
+);
+$map-plain-active-background: (
+  primary: $button-primary-plain-active-background,
+  success: $button-success-plain-active-background,
+  warning: $button-warning-plain-active-background,
+  danger: $button-danger-plain-active-background,
+  info: $button-info-plain-active-background,
+);
+$map-plain-active-border-color: (
+  primary: $button-primary-plain-active-border-color,
+  success: $button-success-plain-active-border-color,
+  warning: $button-warning-plain-active-border-color,
+  danger: $button-danger-plain-active-border-color,
+  info: $button-info-plain-active-border-color,
+);
+
+$map-plain-disabled-color: (
+  primary: $button-primary-plain-disabled-color,
+  success: $button-success-plain-disabled-color,
+  warning: $button-warning-plain-disabled-color,
+  danger: $button-danger-plain-disabled-color,
+  info: $button-info-plain-disabled-color,
+);
+$map-plain-disabled-background: (
+  primary: $button-primary-plain-disabled-background,
+  success: $button-success-plain-disabled-background,
+  warning: $button-warning-plain-disabled-background,
+  danger: $button-danger-plain-disabled-background,
+  info: $button-info-plain-disabled-background,
+);
+
+$map-plain-disabled-border-color: (
+  primary: $button-primary-plain-disabled-border-color,
+  success: $button-success-plain-disabled-border-color,
+  warning: $button-warning-plain-disabled-border-color,
+  danger: $button-danger-plain-disabled-border-color,
+  info: $button-info-plain-disabled-border-color,
+);
+$map-padding:(
+  medium:$button-medium-padding,
+  small: $button-small-padding,
+  mini: $button-mini-padding
+);
+$map-size: (
+  medium: $button-medium-font-size,
+  small: $button-small-font-size,
+  mini: $button-mini-font-size
+);
+$map-border-radius: (
+  medium: $button-medium-border-radius,
+  small: $button-small-border-radius,
+  mini: $button-mini-border-radius
+);
+

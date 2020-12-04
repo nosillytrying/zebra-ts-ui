@@ -1,0 +1,27 @@
+@import "../../variable.scss";
+@import "./_var.scss";
+@import "./_map.scss";
+@import "./_mix.scss";
+@include blockquote(col) {
+    box-sizing: border-box;
+    @for $i from 1 through 24 {
+        &-#{$i}{
+            width: $i / 24 * 100%;
+        }
+        &-offset-#{$i}{
+            margin-left: $i / 24 * 100%;
+        }
+    }
+    @each $key, $value in $map-response {
+        @include response(inspect($value)) {
+            @for $i from 1 through 24 {
+                &-#{$key}-#{$i}{
+                    width: $i / 24 * 100%;
+                }
+                &-#{$key}-offset-#{$i}{
+                    margin-left: $i / 24 * 100%;
+                } 
+            }
+        }
+    }
+}

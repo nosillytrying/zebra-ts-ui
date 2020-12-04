@@ -1,0 +1,7 @@
+$map-response: (
+  "xs": ( max-width: $--sm - 1),
+  "sm": (min-width: $--sm ),
+  "md": (min-width: $--md),
+  "lg": ( min-width: $--lg),
+  "xl": ( min-width: $--xl)
+);

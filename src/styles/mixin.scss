@@ -1,0 +1,7 @@
+$prefix: 'zebra';
+@mixin blockquote($tag) {
+    $namespace: #{$prefix}-#{$tag} !global;
+    .#{$namespace} {
+        @content;
+    }
+}

@@ -1,0 +1,197 @@
+/*
+  button 基础样式
+*/
+$button-default-color: #606266;
+$button-default-border-color: #dcdfe6;
+$button-default-background-color: #fff;
+$button-default-hover-focus-color: #409eff;
+$button-default-hover-focus-border-color:#c6e2ff;
+$button-default-hover-focus-background-color:#ecf5ff;
+$button-default-disabled-color: #c0c4cc;
+$button-default-disabled-background-color: #fff;
+$button-default-disabled-border-color: #ebeef5;
+
+$button-default-text-plain-disabled-color:#c0c4cc;
+$button-default-text-plain-disabled-background: transparent;
+$button-default-text-plain-disabled-border-color: transparent;
+
+$button-default-primary-plain-disabled-color:#fff;
+$button-default-primary-plain-disabled-background: #a0cfff;
+$button-default-primary-plain-disabled-border-color:#a0cfff;
+
+$button-default-success-plain-disabled-color:  #fff;
+$button-default-success-plain-disabled-background: #b3e19d;
+$button-default-success-plain-disabled-border-color: #b3e19d;
+
+
+$button-default-info-plain-disabled-color: #fff;
+$button-default-info-plain-disabled-background: #c8c9cc;
+$button-default-info-plain-disabled-border-color: #c8c9cc;
+
+$button-default-warning-plain-disabled-color: #fff;
+$button-default-warning-plain-disabled-background: #f3d19e;
+$button-default-warning-plain-disabled-border-color: #f3d19e;
+
+
+$button-default-danger-plain-disabled-color: #fff;
+$button-default-danger-plain-disabled-background: #fab6b6;
+$button-default-danger-plain-disabled-border-color: #fab6b6;
+/*
+  button的 default 或者round时候的变量
+*/
+
+$button-text-color: #409eff;
+$button-primary-color: #fff;
+$button-success-color: #fff;
+$button-warning-color: #fff;
+$button-danger-color: #fff;
+$button-info-color: #fff;
+
+$button-text: transparent;
+$button-primary: #409EFF;
+$button-success: #67C23A;
+$button-warning: #E6A23C;
+$button-danger: #F56C6C;
+$button-info: #909399;
+
+$button-primary-active: #3a8ee6;
+$button-success-active: #5daf34;
+$button-warning-active: #82848a;
+$button-danger-active: #e6a23c;
+$button-info-active: #dd6161;
+
+$button-primary-active-color: #fff;
+$button-success-active-color: #fff;
+$button-warning-active-color: #fff;
+$button-danger-active-color: #fff;
+$button-info-active-color: #fff;
+
+$button-primary-hover-focus: #66b1ff;
+$button-success-hover-focus: #85ce61;
+$button-warning-hover-focus: #ebb563;
+$button-danger-hover-focus: #f78989;
+$button-info-hover-focus: #a6a9ad;
+
+/*button plain 对应的*/
+
+
+$button-primary-plain-color: #409eff;
+$button-primary-plain-background: #ecf5ff;
+$button-primary-plain-border-color: #b3d8ff;
+
+$button-success-plain-color: #67c23a;
+$button-success-plain-background: #f0f9eb;
+$button-success-plain-border-color: #c2e7b0;
+
+$button-info-plain-color: #909399;
+$button-info-plain-background: #f4f4f5;
+$button-info-plain-border-color: #d3d4d6;
+
+$button-warning-plain-color: #e6a23c;
+$button-warning-plain-background: #fdf6ec;
+$button-warning-plain-border-color: #f5dab1;
+
+
+$button-danger-plain-color: #f56c6c;
+$button-danger-plain-background: #fef0f0;
+$button-danger-plain-border-color: #fbc4c4;
+
+/*hover-focus下的*/
+
+$button-primary-plain-hover-color: #fff;
+$button-primary-plain-hover-background: #409eff;
+$button-primary-plain-hover-border-color: #409eff;
+
+$button-success-plain-hover-color: #fff;
+$button-success-plain-hover-background: #67c23a;
+$button-success-plain-hover-border-color: #67c23a;
+
+
+$button-info-plain-hover-color: #fff;
+$button-info-plain-hover-background: #909399;
+$button-info-plain-hover-border-color: #909399;
+
+$button-warning-plain-hover-color: #fff;
+$button-warning-plain-hover-background: #e6a23c;
+$button-warning-plain-hover-border-color: #e6a23c;
+
+
+$button-danger-plain-hover-color: #fff;
+$button-danger-plain-hover-background: #f56c6c;
+$button-danger-plain-hover-border-color: #f56c6c;
+
+
+/* active 的*/
+
+
+$button-primary-plain-active-color: #fff;
+$button-primary-plain-active-background: #3a8ee6;
+$button-primary-plain-active-border-color: #3a8ee6;
+
+$button-success-plain-active-color: #fff;
+$button-success-plain-active-background: #5daf34;
+$button-success-plain-active-border-color: #5daf34;
+
+
+$button-info-plain-active-color: #fff;
+$button-info-plain-active-background: #82848a;
+$button-info-plain-active-border-color: #82848a;
+
+$button-warning-plain-active-color: #fff;
+$button-warning-plain-active-background: #cf9236;
+$button-warning-plain-active-border-color: #cf9236;
+
+
+$button-danger-plain-active-color: #fff;
+$button-danger-plain-active-background: #dd6161;
+$button-danger-plain-active-border-color: #dd6161;
+
+
+
+/*disabled*/
+
+$button-primary-plain-disabled-color:#8cc5ff;
+$button-primary-plain-disabled-background: #ecf5ff;
+$button-primary-plain-disabled-border-color: #d9ecff;
+
+$button-success-plain-disabled-color:  #a4da89;
+$button-success-plain-disabled-background: #f0f9eb;
+$button-success-plain-disabled-border-color: #e1f3d8;
+
+
+$button-info-plain-disabled-color: #bcbec2;
+$button-info-plain-disabled-background: #f4f4f5;
+$button-info-plain-disabled-border-color: #e9e9eb;
+
+$button-warning-plain-disabled-color: #f0c78a;
+$button-warning-plain-disabled-background: #fdf6ec;
+$button-warning-plain-disabled-border-color: #faecd8;
+
+
+$button-danger-plain-disabled-color: #f9a7a7;
+$button-danger-plain-disabled-background: #fef0f0;
+$button-danger-plain-disabled-border-color: #fde2e2;
+
+
+
+
+
+
+/*size 相关的*/
+
+$button-default-padding: 12px 23px;
+$button-default-font-size: 14px;
+$button-default-border-radius: 4px;
+
+$button-medium-padding: 12px 20px;
+$button-medium-font-size: 14px;
+$button-medium-border-radius: 4px;
+
+$button-small-padding: 12px 20px;
+$button-small-font-size: 12px;
+
+$button-small-border-radius: 3px;
+
+$button-mini-padding: 7px 15px;
+$button-mini-font-size: 12px;
+$button-mini-border-radius: 3px;

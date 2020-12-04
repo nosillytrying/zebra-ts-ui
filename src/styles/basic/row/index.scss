@@ -1,0 +1,7 @@
+@import "../../variable.scss";
+@import "./_var.scss";
+@include blockquote(row) {
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+}

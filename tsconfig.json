@@ -29,6 +29,8 @@
     ]
   },
   "include": [
+    "examples/**/*.ts",
+    "examples/**/*.tsx",
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
@@ -37,6 +39,7 @@
     "src/shims-vue.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.js"
   ]
 }

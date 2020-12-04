@@ -1,0 +1,8 @@
+@import "../../variable.scss";
+@import "./var.scss";
+@include blockquote(icon) {
+  width: $icon-width;
+  height: $icon-height;
+  vertical-align: middle;
+  fill: $icon-fille;
+}

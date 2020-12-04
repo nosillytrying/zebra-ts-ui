@@ -1,0 +1,58 @@
+@use "sass:map";
+/*
+    定义button对应type的状态
+    传进来的是个map
+*/
+@mixin status($status) {
+  @each $key, $value in $status {
+    &.#{$namespace}--#{$key} {
+      background: $value;
+      color: map.get($map-color, $key);
+      border-color: $value;
+      &:focus,
+      &:hover {
+        background: map.get($map-hover-focus, $key);
+        border-color: map.get($map-hover-focus, $key);
+      }
+      &:active {
+        color: map.get($map-status-active-color, $key);
+        background: map.get($map-status-active, $key);
+        border-color: map.get($map-status-active, $key);
+        outline: none;
+      }
+      &.is-plain {
+        color: map.get($map-plain-color, $key);
+        background: map.get($map-plain-background, $key);
+        border-color: map.get($map-plain-border-color, $key);
+        &:focus,
+        &:hover {
+          color: map.get($map-plain-hover-color, $key);
+          background: map.get($map-plain-hover-background, $key);
+          border-color: map.get($map-plain-hover-border-color, $key);
+        }
+        &:active {
+          color: map.get($map-plain-active-color, $key);
+          background: map.get($map-plain-active-background, $key);
+          border-color: map.get($map-plain-active-border-color, $key);
+        }
+        &.is-disabled {
+          color: map.get($map-plain-disabled-color, $key);
+          background: map.get($map-plain-disabled-background, $key);
+          border-color: map.get($map-plain-disabled-border-color, $key);
+        }
+      }
+      &.is-disabled {
+        color: map.get($map-default-disabled-color, $key);
+        background: map.get($map-default-disabled-background, $key);
+        border-color: map.get($map-default-disabled-border-color, $key);
+      }
+    }
+  }
+  @each $key, $value in $map-padding {
+    &.#{$namespace}--#{$key} {
+      border-radius: map.get($map-border-radius, $key) !important;
+      padding: $value !important;
+      font-size: map.get($map-size, $key) !important;
+    }
+  }
+}

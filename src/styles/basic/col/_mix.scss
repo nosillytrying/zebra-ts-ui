@@ -1,0 +1,6 @@
+@mixin response($value) {
+    @media screen and #{$value}  {
+      @content;
+    }
+  }
+  
