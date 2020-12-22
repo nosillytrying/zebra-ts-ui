@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        position: relative;
+        perspective: 800px;
+        margin: 300px auto;
+      }
+      .box div {
+        width: 200px;
+        height: 150px;
+        overflow: hidden;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        z-index: 1;
+      }
+      .box1 {
+        transform: translateZ(-100px) scale(0.8) translateX(-150px);
+        animation: three-D 7.5s ease -5s infinite; 
+      }
+      .box2 {
+        transform: translateZ(-100px) scale(0.8) translateX(-150px);
+        animation: three-D 7.5s ease -2.5s infinite;
+      }
+      .box3 {
+        transform: translateZ(-100px) scale(0.8) translateX(150px);
+        animation: three-D 7.5s ease 0s infinite;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      /* 总时长是 7.5s */
+      @keyframes three-D {
+        /* 停留2秒 */
+        0%,
+        27% {
+          transform: translateX(150px) scale(0.8);
+          z-index: 1;
+        }
+        /* 过渡时间为 0.5s */
+        34%,
+        61% {
+          z-index: 2;
+          transform: translateX(0px) scale(1);
+        }
+        /* 过渡时间为 0.5s */
+        68%,
+        95% {
+          z-index: 1;
+          transform: translateX(-150px) scale(0.8);
+        }
+        /* 过渡时间为 0.5s 回到最开始的位置*/
+        100% { 
+          z-index: 1;
+          transform: translateX(150px) scale(0.8);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <img
+          src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315036256&di=bc926cdebaa06ccae755a6791857dec4&imgtype=0&src=http%3A%2F%2Fww4.sinaimg.cn%2Flarge%2F696b00f9jw1eqgscjdyjij20u218g4ch.jpg"
+          alt=""
+        />
+      </div>
+      <div class="box2">
+        <img
+          src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315074011&di=7cc265de005ede1c5f16f272a050a7c4&imgtype=0&src=http%3A%2F%2Fp2.qhimgs4.com%2Ft01f6c0d4966cd83166.jpg"
+          alt=""
+        />
+      </div>
+      <div class="box3">
+        <img
+          src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315235768&di=e949e5a503b0e3a5169a67bb296865fd&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fent%2F4_img%2Fupload%2F1f0ce517%2F160%2Fw1024h1536%2F20180903%2Fo5zt-hiqtcan1672203.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>

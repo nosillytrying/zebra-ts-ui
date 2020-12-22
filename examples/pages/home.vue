@@ -9,6 +9,9 @@
     <div style='margin-bottom: 20px;'>
       <router-link to='/color'>color</router-link>
     </div>
+    <div style='margin-bottom: 20px;'>
+      <router-link to='/radio'>radio</router-link>
+    </div>
   </div>
 </template>
 

@@ -1,0 +1,11 @@
+$map-radio-button-padding:(
+    medium: $radio-button-medium-padding,
+    small: $radio-button-small-padding,
+    mini: $radio-button-mini-padding
+);
+$map-radio-button-font-size:(
+    medium: $radio-button-medium-font-size,
+    small: $radio-button-small-font-size,
+    mini: $radio-button-mini-font-size
+);
+$list-radio-button-size:medium, small, mini;

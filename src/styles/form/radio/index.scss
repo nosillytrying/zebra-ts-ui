@@ -1,0 +1,125 @@
+@use "sass:map";
+@import '../../variable.scss';
+@import './_var.scss';
+@import './_map.scss';
+// @import './_mix.scss';
+// @import './_skin.scss';
+
+@include blockquote(radio) {
+  $prefix: #{&} !global;
+  color: $radio-color;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  outline: none;
+  font-size: $radio-font-size;
+  margin-right: 30px;
+  #{&}__input{
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    line-height: 1;
+    position: relative;
+    vertical-align: middle;
+  }
+  #{&}__label{
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  #{&}__original {
+    opacity: 0;
+    outline: none;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+  #{&}__inner{
+    border: 1px solid #dcdfe6;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    &:after{
+      width: 4px;
+      height: 4px;
+      border-radius: 100%;
+      background-color: #fff;
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%) scale(0);
+      transition: transform .15s ease-in;
+    }
+  }
+  &.is-checked:not(.is-disabled){
+    #{$prefix}__label{
+      color: #409eff;
+    }
+    #{$prefix}__inner{
+      border-color: #409eff;
+      background: #409eff;
+      &:after{
+        transform: translate(-50%,-50%) scale(1);
+      }
+    }
+  }
+  &.is-disabled {
+    cursor: not-allowed !important;
+    #{$prefix}__label{
+      color: #c0c4cc;
+      cursor: not-allowed; 
+    }
+    #{$prefix}__inner{
+      color: #c0c4cc;
+      cursor: not-allowed; 
+    }
+    &:not(.is-checked){
+      cursor: not-allowed;
+      #{$prefix}__inner{
+        background-color: #f5f7fa;
+        border-color: #e4e7ed;
+        cursor: not-allowed;
+      }
+    }
+    &.is-checked{
+      #{$prefix}__inner{
+        &:after{
+          cursor: not-allowed;
+          background-color: #c0c4cc;
+          transform: translate(-50%,-50%) scale(1);
+        }
+      }
+    }
+  }
+  &.is-border {
+    padding: 12px 20px 0 10px;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    height: 40px;
+    &.is-checked:not(.is-disabled){
+      border-color: #409eff;
+    }
+  }
+  @each $size in $list-size {
+    &#{&}--#{$size}.is-border{
+      box-sizing: border-box;
+      border-radius: map.get($map-radio-border-radius, $size);
+      height: map.get($map-radio-height, $size);
+      padding: map.get($map-radio-padding, $size);
+    }
+  }
+}

@@ -31,7 +31,6 @@ export default defineComponent({
       itemRefs = []
     })
     const colorList = computed(() => {
-      console.log(selectValue.value, '11111')
       const mainColor = selectValue.value.length === 7 ? selectValue.value : INITIAL_COLOR
       const getColorList = (val) => {
         const color = Color(val)

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <zebra-row :gutter='20'>
+    <zebra-row :gutter='24'>
       <zebra-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
         <div class="grid-content bg-purple"></div>
       </zebra-col>

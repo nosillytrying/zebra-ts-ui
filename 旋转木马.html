@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>项目</title>
+    <style>
+      @keyframes pieceRotate {
+        0% {
+          transform: rotateY(0deg);
+        }
+
+        100% {
+          transform: rotateY(-360deg);
+        }
+      }
+
+      .wrap {
+        position: relative;
+
+        width: 200px;
+
+        height: 200px;
+
+        margin: 300px auto;
+
+        perspective-origin: 50% 50%;
+
+        transform-style: preserve-3d;
+
+        animation: pieceRotate 5s infinite linear;
+      }
+      .wrap:hover {
+        border: 1px solid red;
+        animation-play-state: paused;
+      }
+      .wrap div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+      }
+      img{
+        width: 100%;
+        height: auto;
+      }
+      .box1 {
+        background: #ff6666;
+        transform: rotateY(0deg) translateZ(173.2px);
+      }
+
+      .box2 {
+        background: #ffff00;
+        transform: rotateY(60deg) translateZ(173.2px);
+      }
+
+      .box3 {
+        background: #006699;
+        transform: rotateY(120deg) translateZ(173.2px);
+      }
+
+      .box4 {
+        background: #009999;
+        transform: rotateY(180deg) translateZ(173.2px);
+      }
+
+      .box5 {
+        background: #ff0033;
+        transform: rotateY(240deg) translateZ(173.2px);
+      }
+
+      .box6 {
+        background: #ff6600;
+        transform: rotateY(300deg) translateZ(173.2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box1">
+        <img  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315036256&di=bc926cdebaa06ccae755a6791857dec4&imgtype=0&src=http%3A%2F%2Fww4.sinaimg.cn%2Flarge%2F696b00f9jw1eqgscjdyjij20u218g4ch.jpg" alt="">
+      </div>
+      <div class="box2">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315074011&di=7cc265de005ede1c5f16f272a050a7c4&imgtype=0&src=http%3A%2F%2Fp2.qhimgs4.com%2Ft01f6c0d4966cd83166.jpg" alt="">
+      </div>
+      <div class="box3">
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315235768&di=e949e5a503b0e3a5169a67bb296865fd&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fent%2F4_img%2Fupload%2F1f0ce517%2F160%2Fw1024h1536%2F20180903%2Fo5zt-hiqtcan1672203.jpg" alt="">
+      </div>
+      <div class="box4">
+        <img  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315035698&di=9dde2f409890c9a490ecfe86e3b7f18a&imgtype=0&src=http%3A%2F%2Fp0.ifengimg.com%2Fpmop%2F2018%2F0817%2F8AE83C87F87B4AFD2B4AA356E15E63B4DD01E7C8_size200_w1066_h1600.jpeg" alt="">
+      </div>
+      <div class="box5">
+        <img  src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1255301950,3149805942&fm=26&gp=0.jpg" alt="">
+      </div>
+      <div class="box6">
+        <img  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315035698&di=1875942addd14eb29147a9c3253051fa&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20200511%2Fe21289d38a074cc180a1e2c0d23db44d.jpeg" alt="">
+      </div>
+    </div>
+  </body>
+</html>

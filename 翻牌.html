@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        transform-style: preserve-3d;
+        perspective: 800px; 
+        perspective-origin: 50% 50%;
+      }
+      .box {
+        transform-style: preserve-3d;
+        perspective: 800px;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 200px auto;
+        animation: dongqilai 5s infinite;
+
+      }
+      @keyframes dongqilai {
+        0% {
+            transform: rotate3d(0, 1, 0, 0deg);
+        }
+        50% {
+            transform: rotate3d(0, 1, 0, 180deg);
+        }
+        100% {
+            transform: rotate3d(0, 1, 0, 360deg);
+        }
+      }
+      .box div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box1 {
+        z-index: 1;
+      }
+      .box2 {
+        z-index: 2;
+        transform: rotate3d(0, 1, 0, 180deg);
+      }
+      img{
+          width:100%;
+          height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box1">
+        <img
+        class='img1'
+        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315036256&di=bc926cdebaa06ccae755a6791857dec4&imgtype=0&src=http%3A%2F%2Fww4.sinaimg.cn%2Flarge%2F696b00f9jw1eqgscjdyjij20u218g4ch.jpg"
+        alt=""
+      />
+      </div>
+      <div class="box2">
+        <img
+        class='img2'
+        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1607315074011&di=7cc265de005ede1c5f16f272a050a7c4&imgtype=0&src=http%3A%2F%2Fp2.qhimgs4.com%2Ft01f6c0d4966cd83166.jpg"
+        alt=""
+      />
+      </div>
+    </div>
+    <script>
+        // window.onload = function () {
+        //     let img1 = document.querySelector('.img1')
+        //     let img2 = document.querySelector('.img2')
+        //     img1.addEventListener('click', (e) => {
+
+        //         console.log('img1')
+        //     })
+        //     img2.addEventListener('click', (e) => {
+        //         console.log('img2')
+        //     })
+        // }
+        let rangeArray = (start, end, step) => {
+          return Array.from({
+            length: (end - start) / step + 1
+          }, (item, index) => {
+            return index * step + start
+          })
+        }
+        console.log(rangeArray(1, 20, 10))
+    </script>
+  </body>
+</html>

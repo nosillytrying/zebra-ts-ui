@@ -5,24 +5,44 @@ import ZebraIcon from './basic/icon/index'
 import ZebraCol from './basic/col/index'
 import ZebraRow from './basic/row/index'
 import ZebraColor from './basic/color/index'
+import ZebraRadio from './form/radio/index'
+import ZebraRadioButton from './form/radio-button/index'
+import ZebraRadioGroup from './form/radio-group/index'
+const components = [
+  ZebraButton,
+  ZebraButtonGroup,
+  ZebraIcon,
+  ZebraCol,
+  ZebraRow,
+  ZebraColor,
+  ZebraRadio,
+  ZebraRadioButton,
+  ZebraRadioGroup
+]
+export type ComponentSize = 'medium' | 'small' | 'mini'
+export interface InstallOptions {
+  size: ComponentSize;
+  zIndex: number;
+  local?: any;
+}
 let app: App
-const install = (_app: App) => {
+const install = (_app: App, options: InstallOptions) => {
   app = _app
-  app.component(ZebraButton.name, ZebraButton)
-  app.component(ZebraIcon.name, ZebraIcon)
-  app.component(ZebraButtonGroup.name, ZebraButtonGroup)
-  app.component(ZebraCol.name, ZebraCol)
-  app.component(ZebraRow.name, ZebraRow)
-  app.component(ZebraColor.name, ZebraColor)
+  app.config.globalProperties.$ZEBRA = options
+  components.forEach(item => app.component(item.name, item))
 }
 export default {
   install
 }
 export {
+  install,
   ZebraButton,
   ZebraIcon,
   ZebraButtonGroup,
   ZebraCol,
   ZebraRow,
-  ZebraColor
+  ZebraColor,
+  ZebraRadioGroup,
+  ZebraRadioButton,
+  ZebraRadio
 }

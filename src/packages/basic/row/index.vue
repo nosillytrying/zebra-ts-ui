@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { ref, computed, provide } from 'vue'
+import { ref, computed, provide, watchEffect } from 'vue'
 export default {
   name: 'zebra-row',
   props: {

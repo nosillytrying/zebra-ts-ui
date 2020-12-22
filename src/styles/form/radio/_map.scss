@@ -1,0 +1,16 @@
+$list-size: medium, small, mini;
+$map-radio-border-radius: (
+    medium: $radio-medium-border-radius,
+    small: $radio-small-border-radius,
+    mini: $radio-mini-border-radius
+);
+$map-radio-height: (
+    medium: $radio-medium-height,
+    small: $radio-small-height,
+    mini: $radio-mini-height
+);
+$map-radio-padding: (
+    medium: $radio-medium-padding,
+    small: $radio-small-padding,
+    mini: $radio-mini-padding
+);

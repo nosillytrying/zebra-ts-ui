@@ -2,18 +2,24 @@
   <router-view/>
 </template>
 <script lang='ts'>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, getCurrentInstance, onMounted } from 'vue'
 export default defineComponent({
   name: 'app',
   setup () {
-    const sizeType = ref('medium')
-    const handleClickSetSizeType = () => {
-      sizeType.value = 'small'
-    }
-    return {
-      sizeType,
-      handleClickSetSizeType
-    }
+  //   const refDiv = ref(null)
+  //   const internalInstance = getCurrentInstance() // works
+  //   const sizeType = ref('medium')
+  //   const handleClickSetSizeType = () => {
+  //     sizeType.value = 'small'
+  //   }
+  //   onMounted(() => {
+  //     console.log(internalInstance, '1111')
+  //   })
+  //   return {
+  //     refDiv,
+  //     sizeType,
+  //     handleClickSetSizeType
+  //   }
   }
 })
 </script>

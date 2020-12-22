@@ -16,6 +16,10 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/color',
     component: () => import('../pages/color.vue')
+  },
+  {
+    path: '/radio',
+    component: () => import('../pages/radio.vue')
   }
 ]
 
