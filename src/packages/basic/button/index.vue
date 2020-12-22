@@ -1,11 +1,11 @@
 <template>
-  <button :class='computedClass' :type='$props.nativeType'>
-    <zebra-icon v-if='$props.icon && !$props.loading && $props.position === "left"' :icon='$props.icon'></zebra-icon>
-    <zebra-icon v-if='$props.loading' icon='loading' class='icon-loading'></zebra-icon>
+  <button :class='computedClass' :type='nativeType'>
+    <zebra-icon v-if='icon && !loading && position === "left"' :icon='$props.icon'></zebra-icon>
+    <zebra-icon v-if='loading' icon='loading' class='icon-loading'></zebra-icon>
     <span v-if='$slots.default' class='zebra-button--slot'>
       <slot></slot>
     </span>
-    <zebra-icon v-if='$props.icon && !$props.loading && $props.position === "right"' :icon='$props.icon'></zebra-icon>
+    <zebra-icon v-if='icon && !loading && position === "right"' :icon='icon'></zebra-icon>
   </button>
 </template>
 
