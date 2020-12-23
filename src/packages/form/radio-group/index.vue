@@ -17,11 +17,13 @@ export default defineComponent({
     },
     size: {
       type: String as PropType<zebraRadioGroupSize>,
-      validator (size: zebraRadioGroupSize): boolean {
-        if (!sizeList.includes(size)) {
-          throw new Error('button\'s size is only:' + sizeList.join('、'))
+      ...{
+        validator (size: zebraRadioGroupSize): boolean {
+          if (!sizeList.includes(size)) {
+            throw new Error('button\'s size is only:' + sizeList.join('、'))
+          }
+          return true
         }
-        return true
       }
     },
     disabled: {
@@ -37,7 +39,7 @@ export default defineComponent({
       default: '#ffffff'
     }
   },
-  setup (props: any, ctx) {
+  setup (props, ctx) {
     const changeEvent = (val: zebraModelType) => {
       ctx.emit(UPDATE_MODEL_EVENT, val)
       nextTick(() => {

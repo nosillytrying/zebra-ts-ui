@@ -14,5 +14,5 @@ export interface ZebraRadioGroupContext {
 }
 
 // const 常量
-export const zebraRadioGroupKey: InjectionKey<ZebraRadioGroupContext> = 'zebraRadioGroup' as any
+export const zebraRadioGroupKey = 'zebraRadioGroup'
 export const sizeList = ['medium', 'small', 'mini']
