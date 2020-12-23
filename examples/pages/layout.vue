@@ -1,6 +1,7 @@
 <template>
   <div>
-    <zebra-row :gutter='24'>
+    <zebra-button @click='handleSettGutter'>点击吧小伙伴{{gutter}}</zebra-button>
+    <zebra-row :gutter='gutter'>
       <zebra-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
         <div class="grid-content bg-purple"></div>
       </zebra-col>
@@ -98,8 +99,21 @@
   </div>
 </template>
 
-<script>
-export default {}
+<script lang='ts'>
+import { defineComponent, ref } from 'vue'
+export default defineComponent({
+  name: 'layout',
+  setup () {
+    const gutter = ref<number>(24)
+    const handleSettGutter = () => {
+      gutter.value = gutter.value + 10
+    }
+    return {
+      gutter,
+      handleSettGutter
+    }
+  }
+})
 </script>
 <style lang='scss'>
 .zebra-col {

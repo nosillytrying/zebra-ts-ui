@@ -3,9 +3,9 @@
     <slot></slot>
   </div>
 </template>
-<script>
-import { computed, inject } from 'vue'
-export default {
+<script lang='ts'>
+import { computed, inject, defineComponent, PropType } from 'vue'
+export default defineComponent({
   name: 'zebra-col',
   inheritAttrs: false,
   props: {
@@ -17,38 +17,41 @@ export default {
       type: Number,
       default: 0
     },
-    xs: [Number, Object],
-    sm: [Number, Object],
-    md: [Number, Object],
-    lg: [Number, Object],
-    xl: [Number, Object]
+    xs: [Number, Object] as PropType<number | { span: number; offset: number }>,
+    sm: [Number, Object] as PropType<number | { span: number; offset: number }>,
+    md: [Number, Object] as PropType<number | { span: number; offset: number }>,
+    lg: [Number, Object] as PropType<number | { span: number; offset: number }>,
+    xl: [Number, Object] as PropType<number | { span: number; offset: number }>
   },
-  setup (props, context) {
+  setup (props) {
     const computedClass = computed(() => {
       const ret = []
       ret.push(`zebra-col-${props.span}`)
       if (props.offset) {
         ret.push(`zebra-col-offset-${props.span}`)
       }
-      ['xs', 'sm', 'md', 'lg', 'xl'].forEach((type) => {
-        if (typeof props[type] === 'object') {
-          props[type].span && ret.push(`zebra-col-${type}-${props[type].span}`)
-          props[type].offset &&
-            ret.push(`zebra-col-${type}-offset-${props[type]}`)
-        } else {
-          props[type] && ret.push(`zebra-col-${type}-${props[type]}`)
+      (['xs', 'sm', 'md', 'lg', 'xl'] as ['xs', 'sm', 'md', 'lg', 'xl']).forEach((type) => {
+        const propVal = props[type]
+        if (propVal !== undefined) {
+          if (typeof propVal === 'number') {
+            propVal && ret.push(`zebra-col-${type}-${propVal}`)
+          } else {
+            propVal.span && ret.push(`zebra-col-${type}-${propVal.span}`)
+            propVal.offset &&
+            ret.push(`zebra-col-${type}-offset-${propVal.offset}`)
+          }
         }
       })
       return ret
     })
     const computedStyle = computed(() => {
       let colStyle = {}
-      const getter = inject('gutter')
+      const getter = inject<number>('gutter')
       if (getter) {
         colStyle = {
           ...colStyle,
-          paddingLeft: getter.value / 2 + 'px',
-          paddingRight: getter.value / 2 + 'px'
+          paddingLeft: getter / 2 + 'px',
+          paddingRight: getter / 2 + 'px'
         }
       }
       return colStyle
@@ -58,5 +61,5 @@ export default {
       computedStyle
     }
   }
-}
+})
 </script>

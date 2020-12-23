@@ -4,9 +4,9 @@
   </div>
 </template>
 
-<script>
-import { ref, computed, provide, watchEffect } from 'vue'
-export default {
+<script lang='ts'>
+import { ref, computed, provide, defineComponent } from 'vue'
+export default defineComponent({
   name: 'zebra-row',
   props: {
     gutter: {
@@ -16,25 +16,29 @@ export default {
     justify: {
       type: String,
       default: 'start',
-      validator: function (value) {
-        if (!['start', 'end', 'center', 'space-around', 'space-between'].includes(value)) {
-          throw new Error(
-            'row\'s justify is only: ' + ['start', 'end', 'center', 'space-around', 'space-between'].join('、')
-          )
+      ...{
+        validator: function (value: string) {
+          if (!['start', 'end', 'center', 'space-around', 'space-between'].includes(value)) {
+            throw new Error(
+              'row\'s justify is only: ' + ['start', 'end', 'center', 'space-around', 'space-between'].join('、')
+            )
+          }
+          return true
         }
-        return true
       }
     },
     align: {
       type: String,
       default: 'top',
-      validator: function (value) {
-        if (!['top', 'middle', 'bottom'].includes(value)) {
-          throw new Error(
-            'row\'s align is only: ' + ['top', 'middle', 'bottom'].join('、')
-          )
+      ...{
+        validator: function (value: string) {
+          if (!['top', 'middle', 'bottom'].includes(value)) {
+            throw new Error(
+              'row\'s align is only: ' + ['top', 'middle', 'bottom'].join('、')
+            )
+          }
+          return true
         }
-        return true
       }
     },
     tag: {
@@ -42,17 +46,17 @@ export default {
       default: 'div'
     }
   },
-  setup (props, context) {
+  setup (props) {
     let rowStyle = {}
-    const propGutter = ref(props.gutter)
+    const propGutter = ref<number>(props.gutter)
     provide('gutter', propGutter)
     const computedStyle = computed(() => {
       propGutter.value = props.gutter || 0
       if (props.gutter) {
         rowStyle = {
           ...rowStyle,
-          marginLeft: -props.gutter.value / 2 + 'px',
-          marginRight: -props.gutter.value / 2 + 'px'
+          marginLeft: -props.gutter / 2 + 'px',
+          marginRight: -props.gutter / 2 + 'px'
         }
       }
       if (props.justify) {
@@ -68,5 +72,5 @@ export default {
       computedStyle
     }
   }
-}
+})
 </script>
