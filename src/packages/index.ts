@@ -5,6 +5,7 @@ import ZebraIcon from './basic/icon/index'
 import ZebraCol from './basic/col/index'
 import ZebraRow from './basic/row/index'
 import ZebraColor from './basic/color/index'
+import ZebraNotify from './basic/notify/index'
 import ZebraRadio from './form/radio/index'
 import ZebraRadioButton from './form/radio-button/index'
 import ZebraRadioGroup from './form/radio-group/index'
@@ -17,7 +18,8 @@ const components = [
   ZebraColor,
   ZebraRadio,
   ZebraRadioButton,
-  ZebraRadioGroup
+  ZebraRadioGroup,
+  ZebraNotify
 ]
 export type ComponentSize = 'medium' | 'small' | 'mini'
 export interface InstallOptions {
@@ -44,5 +46,6 @@ export {
   ZebraColor,
   ZebraRadioGroup,
   ZebraRadioButton,
-  ZebraRadio
+  ZebraRadio,
+  ZebraNotify
 }

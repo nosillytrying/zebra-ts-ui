@@ -1,0 +1,27 @@
+@import "../../variable.scss";
+@import './_var.scss';
+@include blockquote(notify){
+  width: $notify-width;
+  background: $background-color;
+  position: fixed;
+  border:1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 14px 26px 14px 13px ;
+  display: flex;
+  overflow: hidden;
+  z-index: $z-index;
+  .zebra-notification__title{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .zebra-notification__content{
+    margin-top: 5px;
+  }
+  .zebra-notification__closeBtn{
+    font-size: $notify-close-font-size;
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    cursor: $close-cursor;
+  }
+}

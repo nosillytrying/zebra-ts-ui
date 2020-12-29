@@ -12,6 +12,9 @@
     <div style='margin-bottom: 20px;'>
       <router-link to='/radio'>radio</router-link>
     </div>
+    <div style='margin-bottom: 20px;'>
+      <router-link to='/notify'>notify</router-link>
+    </div>
   </div>
 </template>
 

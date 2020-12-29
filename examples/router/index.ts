@@ -20,6 +20,10 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/radio',
     component: () => import('../pages/radio.vue')
+  },
+  {
+    path: '/notify',
+    component: () => import('../pages/notify.vue')
   }
 ]
 
